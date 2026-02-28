@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Permet une utilisation confortable sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flask Calculator</title>
+    <!-- Un seul fichier CSS pour faciliter la maintenance -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -12,6 +14,7 @@
   <body>
     <div class="calculator">
       <h1>Flask Calculator</h1>
+      <!-- Formulaire POST pour sécuriser l'envoi des données -->
       <form method="POST">
         <input
           type="text"
@@ -31,6 +34,7 @@
           <button type="button" class="btn" onclick="appendToDisplay('3')">
             3
           </button>
+          <!-- Opérateurs en orange pour les distinguer des chiffres -->
           <button
             type="button"
             class="btn operator"
