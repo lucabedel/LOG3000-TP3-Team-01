@@ -4,7 +4,7 @@ Ce module initialise le serveur, définit les routes et gère la logique de calc
 """
 
 from flask import Flask, request, render_template
-from operators import add, subtract, multiply, divide
+from .operators import add, subtract, multiply, divide
 
 # Initialisation de l'application Flask
 app = Flask(__name__)
