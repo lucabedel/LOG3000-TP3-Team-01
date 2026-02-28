@@ -9,6 +9,7 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(calculate("2+1"), 3)
         self.assertEqual(calculate("0.5+2"), 2.5)
         self.assertEqual(calculate("-2+1"), -1)
+        self.assertEqual(calculate("1+-2"), -1)
         self.assertEqual(calculate("2+0"), 2)
 
     def test_subtraction(self):
@@ -25,12 +26,14 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(calculate("0.5*2"), 1)
         self.assertEqual(calculate("2*0"), 0)
         self.assertEqual(calculate("-2*1"), -2)
+        self.assertEqual(calculate("1*-2"), -2)
         
     def test_division(self):
         """Test de la division."""
         self.assertEqual(calculate("5/2"), 2.5)  
         self.assertEqual(calculate("1/3"), 0.3333333333333333)
         self.assertEqual(calculate("0.5/2"), 0.25)
+        self.assertEqual(calculate("-2/2"), -1)
         self.assertEqual(calculate("2/-2"), -1)
         with self.assertRaises(ZeroDivisionError):
             calculate("5/0")

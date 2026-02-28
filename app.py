@@ -21,6 +21,8 @@ def calculate(expr: str):
 
     for i, ch in enumerate(s):
         if ch in OPS:
+            if ch == '-' and (i == 0 or s[i-1] in OPS):
+                continue
             if op_pos != -1:
                 raise ValueError("only one operator is allowed")
             op_pos = i
