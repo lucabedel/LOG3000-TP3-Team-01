@@ -1,80 +1,77 @@
-/* Fichier de styles pour l'interface de la calculatrice
-   Définit l'apparence visuelle pour rendre l'application intuitive et agréable à utiliser.
-*/
-
+/* Fichier de styles pour l'interface de la calculatrice */
 body {
-   font-family: Arial, sans-serif;        /* Police neutre et universelle pour une lisibilité maximale */
+   font-family: Arial, sans-serif;
    background-color: #f0f0f0;              /* Fond clair pour faire ressortir la calculatrice */
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100vh;                           /* Occupe toute la hauteur pour un centrage parfait */
-   margin: 0;                                /* Évite les espaces indésirables qui décentreraient l'interface */
+   height: 100vh;
+   margin: 0;
 }
 
 .calculator {
    width: 100%;
-   max-width: 600px;                        /* Taille confortable pour la lecture, même sur grand écran */
-   background-color: #333;                  /* Fond sombre pour contraster avec le texte blanc */
-   padding: 30px;                            /* Espace aéré autour des éléments pour éviter une impression de tassement */
-   border-radius: 15px;                      /* Coins arrondis pour adoucir le design */
-   box-shadow: 0px 0px 15px 0px #000;        /* Ombre pour donner un effet de profondeur et faire ressortir la calculatrice */
+   max-width: 600px;
+   background-color: #333;                  /* Fond sombre pour contraster avec le texte */
+   padding: 30px;
+   border-radius: 15px;
+   box-shadow: 0px 0px 15px 0px #000;
    text-align: center;
 }
 
 h1 {
-   color: #fff;                              /* Texte blanc très lisible sur fond sombre */
-   margin-bottom: 20px;                      /* Sépare visuellement le titre de la calculatrice */
-   font-size: 36px;                          /* Taille imposante pour que le titre soit immédiatement repéré */
+   color: #fff;
+   margin-bottom: 20px;
+   font-size: 36px;
 }
 
 #display {
    width: 100%;
-   height: 80px;                              /* Assez grand pour voir les longs calculs sans avoir à défiler */
-   font-size: 36px;                           /* Texte bien lisible */
-   text-align: right;                         /* Aligné à droite comme les utilisateurs s'y attendent (habitude des calculatrices) */
+   height: 80px;
+   font-size: 36px;
+   text-align: right;                         /* Aligné à droite (habitude des calculatrices) */
    padding: 15px;
-   margin-bottom: 20px;                        /* Sépare l'affichage des boutons pour une meilleure lisibilité */
+   margin-bottom: 20px;
    border-radius: 10px;
-   border: none;                                /* Évite les bordures qui alourdiraient le design épuré */
-   background-color: #222;                       /* Fond très foncé pour que l'affichage contraste bien avec les boutons */
+   border: none;
+   background-color: #222;
    color: #fff;
 }
 
 .buttons {
    display: grid;
-   grid-template-columns: repeat(4, 1fr);         /* 4 colonnes comme sur une calculatrice standard */
-   gap: 15px;                                      /* Espace suffisant entre les boutons pour éviter les clics involontaires */
+   grid-template-columns: repeat(4, 1fr);      /* 4 colonnes comme une calculatrice standard */
+   gap: 15px;                                   /* Espace pour éviter les clics involontaires */
 }
 
 .btn {
    width: 100%;
-   padding: 30px;                                   /* Grandes zones cliquables pour faciliter l'utilisation au doigt (mobile) */
+   padding: 30px;                                /* Grandes zones cliquables pour le mobile */
    font-size: 24px;
    border: none;
    border-radius: 10px;
-   background-color: #666;                          /* Gris neutre pour ne pas distraire de l'action */
+   background-color: #666;
    color: #fff;
-   cursor: pointer;                                  /* Indique visuellement que l'élément est interactif */
-   transition: background-color 0.2s;                /* Animation subtile pour un feedback visuel agréable */
+   cursor: pointer;
+   transition: background-color 0.2s;
 }
 
 .btn:hover {
-   background-color: #555;                          /* Assombrit légèrement pour confirmer l'interaction au survol */
+   background-color: #555;
 }
 
 .operator {
-   background-color: #ff9500;                       /* Couleur distincte pour repérer rapidement les opérations */
+   background-color: #ff9500;                    /* Couleur distincte pour les opérateurs */
 }
 
 .operator:hover {
-   background-color: #e68a00;                        /*Confirme le survol sans perdre la couleur spécifique des opérateurs mathématiques*/
+   background-color: #e68a00;
 }
 
 .btn:active {
-   background-color: #444;                            /* Effet d'enfoncement pour simuler un bouton physique */
+   background-color: #444;
 }
 
 .operator:active {
-   background-color: #cc7a00;                         /* Maintient la cohérence des couleurs pendant le clic */
+   background-color: #cc7a00;
 }

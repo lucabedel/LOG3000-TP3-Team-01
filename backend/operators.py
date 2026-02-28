@@ -16,6 +16,7 @@ def add(a, b):
     """
     return a + b
 
+
 def subtract(a, b):
     """
     Soustrait le deuxième nombre du premier.
@@ -27,7 +28,8 @@ def subtract(a, b):
     Returns:
         float: Le résultat de a moins b
     """
-    return b - a
+    return a - b
+
 
 def multiply(a, b):
     """

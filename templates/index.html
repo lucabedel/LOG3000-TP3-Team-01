@@ -16,7 +16,6 @@
       <h1>Flask Calculator</h1>
       <!-- Formulaire POST pour sécuriser l'envoi des données -->
       <form method="POST">
-        <!-- Lecture seule : l'utilisateur ne peut pas modifier directement -->
         <input
           type="text"
           name="display"
@@ -81,9 +80,7 @@
           <button type="button" class="btn" onclick="appendToDisplay('0')">
             0
           </button>
-          <!-- Bouton "C" pour effacer rapidement -->
           <button type="button" class="btn" onclick="clearDisplay()">C</button>
-          <!-- Bouton "=" déclenche le calcul côté serveur -->
           <button type="submit" class="btn operator">=</button>
           <button
             type="button"
