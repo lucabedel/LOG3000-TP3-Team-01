@@ -21,9 +21,10 @@ OPS = {
 def calculate(expr: str):
     """
     Évalue une expression mathématique simple (un seul opérateur) et retourne le résultat.
+    Gère les nombres négatifs (ex: "-2+3" est interprété comme (-2) + 3).
     
     Args:
-        expr (str): L'expression mathématique sous forme de chaîne (ex: "3+5")
+        expr (str): L'expression mathématique sous forme de chaîne (ex: "3+5" ou "-2+3")
     
     Returns:
         float: Le résultat du calcul
@@ -41,9 +42,14 @@ def calculate(expr: str):
     op_pos = -1
     op_char = None
 
-    # Parcourt chaque caractère pour trouver l'opérateur
+    # Parcourt chaque caractère pour trouver l'opérateur principal
     for i, ch in enumerate(s):
         if ch in OPS:
+            # Gestion du signe moins pour les nombres négatifs
+            # Si '-' est au début ou après un autre opérateur, c'est un signe négatif, pas un opérateur
+            if ch == '-' and (i == 0 or s[i-1] in OPS):
+                continue
+            
             # Si on a déjà trouvé un opérateur, l'expression est invalide
             # (la calculatrice ne gère que les opérations simples pour l'instant)
             if op_pos != -1:

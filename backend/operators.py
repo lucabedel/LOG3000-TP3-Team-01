@@ -42,7 +42,8 @@ def multiply(a, b):
     Returns:
         float: Le produit de a et b
     """
-    return a ** b
+    return a * b  # CORRECTION: Multiplication (*) au lieu de puissance (**)
+
 
 def divide(a, b):
     """
@@ -58,4 +59,6 @@ def divide(a, b):
     Raises:
         ZeroDivisionError: Si b est égal à zéro
     """
-    return a // b
+    if b == 0:
+        raise ZeroDivisionError("division by zero")
+    return a / b  # CORRECTION: Division réelle (/) au lieu de division entière (//)
