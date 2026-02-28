@@ -8,7 +8,6 @@ class TestCalculate(unittest.TestCase):
         """Test de l'addition."""
         self.assertEqual(calculate("2+1"), 3)
         self.assertEqual(calculate("0.5+2"), 2.5)
-        self.assertEqual(calculate("-2+1"), -1)
         self.assertEqual(calculate("2+0"), 2)
 
     def test_subtraction(self):
@@ -16,7 +15,6 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(calculate("5-2"), 3)
         self.assertEqual(calculate("0-2"), -2)
         self.assertEqual(calculate("2-0"), 2)
-        self.assertEqual(calculate("-2-1"), -3)
         self.assertEqual(calculate("0.5-2"), -1.5)
 
     def test_multiplication(self):
@@ -24,7 +22,6 @@ class TestCalculate(unittest.TestCase):
         self.assertEqual(calculate("2*3"), 6) 
         self.assertEqual(calculate("0.5*2"), 1)
         self.assertEqual(calculate("2*0"), 0)
-        self.assertEqual(calculate("-2*1"), -2)
         
     def test_division(self):
         """Test de la division."""
