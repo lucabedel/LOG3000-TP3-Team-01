@@ -4,10 +4,6 @@
 
 Ce projet vise à documenter et à corriger une application existante web de calculatrice simple utilisant Python et Flask. L’application permet d’effectuer des opérations arithmétiques de base.
 
-## Numéro d’équipe
-
-**Équipe 1**
-
 ## Prérequis d’installation
 
 - Un compte GitHub
