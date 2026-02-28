@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Permet une utilisation confortable sur mobile (zoom et largeur adaptés automatiquement) -->
+    <!-- Permet une utilisation confortable sur mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flask Calculator</title>
-    <!-- Un seul fichier CSS pour centraliser le style et faciliter la maintenance -->
+    <!-- Un seul fichier CSS pour faciliter la maintenance -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
@@ -14,9 +14,9 @@
   <body>
     <div class="calculator">
       <h1>Flask Calculator</h1>
-      <!-- Formulaire POST pour sécuriser l'envoi des données au serveur -->
+      <!-- Formulaire POST pour sécuriser l'envoi des données -->
       <form method="POST">
-        <!-- Champ en lecture seule : l'utilisateur voit son calcul mais ne peut pas le modifier directement (évite les erreurs) -->
+        <!-- Lecture seule : l'utilisateur ne peut pas modifier directement -->
         <input
           type="text"
           name="display"
@@ -26,7 +26,6 @@
         />
 
         <div class="buttons">
-          <!-- Les chiffres s'affichent immédiatement pour que l'utilisateur voie son calcul se construire en temps réel -->
           <button type="button" class="btn" onclick="appendToDisplay('1')">
             1
           </button>
@@ -36,7 +35,7 @@
           <button type="button" class="btn" onclick="appendToDisplay('3')">
             3
           </button>
-          <!-- Opérateurs en orange pour les distinguer visuellement des chiffres -->
+          <!-- Opérateurs en orange pour les distinguer des chiffres -->
           <button
             type="button"
             class="btn operator"
@@ -54,7 +53,6 @@
           <button type="button" class="btn" onclick="appendToDisplay('6')">
             6
           </button>
-          <!-- Opérateurs en orange pour les distinguer visuellement des chiffres -->
           <button
             type="button"
             class="btn operator"
@@ -72,7 +70,6 @@
           <button type="button" class="btn" onclick="appendToDisplay('9')">
             9
           </button>
-          <!-- Opérateurs en orange pour les distinguer visuellement des chiffres -->
           <button
             type="button"
             class="btn operator"
@@ -84,11 +81,10 @@
           <button type="button" class="btn" onclick="appendToDisplay('0')">
             0
           </button>
-          <!-- Bouton "C" (Clear) pour corriger rapidement une erreur de saisie -->
+          <!-- Bouton "C" pour effacer rapidement -->
           <button type="button" class="btn" onclick="clearDisplay()">C</button>
-          <!-- Bouton "=" de type submit : déclenche le calcul côté serveur pour plus de sécurité -->
+          <!-- Bouton "=" déclenche le calcul côté serveur -->
           <button type="submit" class="btn operator">=</button>
-          <!-- Opérateurs en orange pour les distinguer visuellement des chiffres -->
           <button
             type="button"
             class="btn operator"
@@ -101,13 +97,11 @@
     </div>
 
     <script>
-      // Ajoute un chiffre ou opérateur à l'affichage sans recharger la page (fluidité)
       function appendToDisplay(value) {
         const display = document.getElementById("display");
         display.value += value;
       }
 
-      // Vide l'affichage d'un seul coup pour permettre à l'utilisateur de recommencer facilement
       function clearDisplay() {
         document.getElementById("display").value = "";
       }
