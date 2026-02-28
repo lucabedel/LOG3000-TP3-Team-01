@@ -24,5 +24,5 @@ Tous les tests seront exécutés automatiquement.
   - Gestion des erreurs (opérateurs multiples, opérandes non numériques, expression vide, opérateur mal placé)
 
 - **Fonctions arithmétiques** :
-  - Addition, soustraction, multiplication (puissance), division entière
+  - Addition, soustraction, multiplication, division
   - Gestion des cas limites (zéro, négatif, division par zéro)
