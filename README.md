@@ -39,7 +39,7 @@ python -m pip install flask
 ### 3. Lancer l’application
 
 ```bash
-python backend/app.py
+python app.py
 ```
 
 ### 4. Accéder à l’application
@@ -140,11 +140,7 @@ Créer une **Pull Request (PR)** vers la branche `main`.
 ## Structure du projet
 
 ```
-backend/              # Logique serveur et calculs
-│
-├── app.py            # Serveur Flask
-├── operators.py      # Fonctions arithmétiques
-├── README.md
+
 static/               # Fichiers CSS
 ├── style.css         # Styles de l'application
 ├── README.md
@@ -156,6 +152,8 @@ tests/                # Tests unitaires
 ├── test_operators.py # Tests des opérations
 ├── README.md
 README.md             # Documentation principale
+├── app.py            # Serveur Flask
+├── operators.py      # Fonctions arithmétiques
 ```
 Luca Badel 2297114
 Christopher Azrak 2251271
