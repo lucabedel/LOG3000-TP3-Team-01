@@ -1,5 +1,5 @@
 import unittest
-from backend.app import calculate
+from app import calculate
 
 class TestCalculate(unittest.TestCase):
     """Tests unitaires pour la fonction calculate du module app."""
