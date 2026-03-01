@@ -1,5 +1,5 @@
 import unittest
-from backend.operators import add, subtract, multiply, divide
+from operators import add, subtract, multiply, divide
 
 class TestOperators(unittest.TestCase):
     """Tests unitaires pour les fonctions du module operators."""
